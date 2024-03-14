@@ -1,0 +1,14 @@
+import mariadb as MySqlDB
+mydb=MySqlDB.connect(host="localhost",user="root",password="",database="prince")
+mycur=mydb.cursor()
+#sql="CREATE database prince"
+#sql="CREATE TABLE stud(id int NOT NULL,name varchar(50) NOT NULL)"
+#sql="INSERT into stud values(6,'Demo')"
+#sql="SELECT * FROM STUD"
+#sql="DELETE FROM stud WHERE id='5'"
+sql="UPDATE stud SET name='Demo' WHERE name='prince' "
+mycur.execute(sql)
+#records=mycur.fetchall()
+#for x in records:
+#    print(x)
+mydb.commit()
